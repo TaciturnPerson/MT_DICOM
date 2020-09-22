@@ -1,7 +1,7 @@
 {
-  "name": "dwv-jqui",
-  "version": "0.5.0-beta",
-  "description": "Medical viewer using DWV (DICOM Web Viewer) and jQuery UI.",
+  "name": "MT_DICOM",
+  "version": "0.0.1",
+  "description": "Medical viewer using DICOM Web Viewer and jQuery UI.",
   "keywords": [
     "DICOM",
     "medical",
