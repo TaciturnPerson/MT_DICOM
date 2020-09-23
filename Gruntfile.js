@@ -26,14 +26,14 @@ module.exports = function(grunt) {
             prod: {
                 options: {
                     port: 3000,
-                    hostname: 'localhost',
+                    hostname: 'gentle-island-39424.herokuapp.com',
                     livereload: true
                 }
             },
             dev: {
                 options: {
                     port: 3000,
-                    hostname: 'localhost',
+                    hostname: 'gentle-island-39424.herokuapp.com',
                     livereload: true,
                     base: {
                         path: './',
