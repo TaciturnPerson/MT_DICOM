@@ -22,28 +22,6 @@ module.exports = function(grunt) {
                 },
             },
         },
-        connect: {
-            prod: {
-                options: {
-                    port: 80,
-                    hostname: '',
-                    livereload: true
-                }
-            },
-            dev: {
-                options: {
-                    port: 80,
-                    hostname: '',
-                    livereload: true,
-                    base: {
-                        path: './',
-                        options: {
-                            index: 'index-dev.html'
-                        }
-                    }
-                }
-            }
-        },
         watch: {
             scripts: {
                 files: ['**/*.js', '!**/node_modules/**', '**/node_modules/dwv/**', '*.html'],
