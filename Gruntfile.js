@@ -26,14 +26,14 @@ module.exports = function(grunt) {
             prod: {
                 options: {
                     port: 3000,
-                    hostname: 'localhost',
+                    hostname: '',
                     livereload: true
                 }
             },
             dev: {
                 options: {
                     port: 3000,
-                    hostname: 'localhost',
+                    hostname: '',
                     livereload: true,
                     base: {
                         path: './',
