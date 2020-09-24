@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         connect: {
             prod: {
                 options: {
-                    hostname: 'herokuapp.com',
+                    
                     livereload: true
                 }
             },
