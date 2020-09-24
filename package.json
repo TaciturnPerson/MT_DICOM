@@ -32,6 +32,7 @@
   },
   "scripts": {
     "heroku-postbuild": "grunt connect",
+    "postinstall": "./node_modules/grunt/bin/grunt install"
     "start": "grunt start",
     "dev": "grunt dev",
     "lint": "grunt lint",
