@@ -38,7 +38,7 @@
   },
   "scripts": {
     
-    "heroku-postbuild": "grunt connect",
+    "postinstall": "npm install express",
     "start": "grunt start",
     "dev": "grunt dev",
     "lint": "grunt lint",
