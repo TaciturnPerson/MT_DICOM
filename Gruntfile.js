@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         connect: {
             prod: {
                 options: {
-                    hostname: '0.0.0.0',
+                    hostname: '3ef2fce4-75de-40f8-9a38-51f8d04b4d69',
                     livereload: true
                 }
             },
