@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         connect: {
             prod: {
                 options: {
-                    hostname: 'gentle-island-39424.herokuapp.com:80',
+                    hostname: '0.0.0.0',
                     livereload: true
                 }
             },
