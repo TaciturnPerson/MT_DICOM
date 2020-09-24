@@ -32,6 +32,7 @@
   },
   "scripts": {
     "postinstall": "npm install grunt",
+    "postinstallG": "npm install -g grunt-cli",
     "heroku-postbuild": "grunt connect",
     "start": "grunt start",
     "dev": "grunt dev",
