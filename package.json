@@ -31,7 +31,7 @@
     "grunt-contrib-watch": "1.1.0"
   },
   "scripts": {
-    "postinstall": "npm install grunt npm install grunt-cli npm audit fix",
+    "postinstall": "npm install -g grunt-cli npm install grunt npm audit fix",
     "heroku-postbuild": "grunt connect",
     "start": "grunt start",
     "dev": "grunt dev",
