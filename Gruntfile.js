@@ -29,18 +29,6 @@ module.exports = function(grunt) {
                     livereload: true
                 }
             },
-            dev: {
-                options: {
-                    hostname: '',
-                    livereload: true,
-                    base: {
-                        path: './',
-                        options: {
-                            index: 'index-dev.html'
-                        }
-                    }
-                }
-            }
         },
         watch: {
             scripts: {
