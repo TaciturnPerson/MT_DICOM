@@ -25,6 +25,7 @@ module.exports = function(grunt) {
         connect: {
             prod: {
                 options: {
+		    port: process.env.PORT || 8080,
                     hostname: 'gentle-island-39424.herokuapp.com',
                     livereload: true
                 }
