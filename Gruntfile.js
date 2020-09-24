@@ -25,14 +25,14 @@ module.exports = function(grunt) {
         connect: {
             prod: {
                 options: {
-		    port: 3000,
+		    port: process.env.PORT || 3000,
                     hostname: '',
                     livereload: true
                 }
             },
             dev: {
                 options: {
-		    port: 3000,
+		    port: process.env.PORT || 3000,
                     hostname: '',
                     livereload: true,
                     base: {
