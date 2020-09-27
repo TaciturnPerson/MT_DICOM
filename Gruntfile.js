@@ -9,7 +9,13 @@ module.exports = function(grunt) {
                 options: {
 		        port: 5000,
 		        hostname: "0.0.0.0",
-                    livereload: 35729
+                    livereload: 35729,
+                    base: {
+                        path: './',
+                        options: {
+                            index: 'index.html'
+                        }
+                    }
                 }
             },
         },
@@ -28,5 +34,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Task to run tests
-    grunt.registerTask('start', ['connect', 'watch']);
+    grunt.registerTask('start', ['connect']);
 };
