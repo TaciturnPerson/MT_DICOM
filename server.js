@@ -9,7 +9,7 @@ express()
   .listen(PORT, onListen);
 
 function hello(res) {
-  res.send('index.html');
+  res.sendFile('index.html');
 }
 
 function onListen() {
