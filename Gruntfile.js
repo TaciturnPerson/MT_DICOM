@@ -11,7 +11,7 @@ app.get('/', function() {
     console.log('App is running, server is listening on port ', app.get('port'));
 });
 var port = app.get('port');
-app.get(app.close());
+app.set('port', (process.env.PORT || 5000));
 console.log('App is running, server is listening on port ', app.get('port'));
 
 module.exports = function(grunt) {
