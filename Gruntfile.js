@@ -9,7 +9,9 @@ module.exports = function(grunt) {
     app.set('port', (process.env.PORT || 5000));
 
 //For avoidong Heroku $PORT error
-    app.get('/', grunt.registerTask('start', ['connect:prod', 'watch'])).listen(app.get('port'), function() {
+    app.get('/', function() {
+
+    }).listen(app.get('port'), function() {
         console.log('App is running, server is listening on port ', app.get('port'));
     });
 
@@ -59,5 +61,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Task to run tests
-
+    grunt.registerTask('start', ['connect:prod', 'watch']);
 };
