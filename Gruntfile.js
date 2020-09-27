@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 		        port: port,
                     keepalive: true,
                     base: {
-                        path: './',
+                        path: '/',
                         options: {
                             index: 'index.html'
                         },
