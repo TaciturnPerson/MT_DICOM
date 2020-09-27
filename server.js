@@ -9,10 +9,11 @@ express()
     .use(hello)
     .listen(PORT, onListen);
 
-app.use(express.static('MT_DICOM'));
-app.get('/', function (req, res){
-  res.send(__dirname, '/', req);
-});
+app.use(express.static('node_modules'));
+app.use(express.static('css'));
+app.use(express.static('ext'));
+app.use(express.static('resources'));
+app.use(express.static('src'));
 
 function hello(req, res, next) {
   res.sendFile(path.join(__dirname, '/', 'index.html'));
