@@ -1,13 +1,4 @@
 /* global module */
-var express = require('express');
-var app = express();
-
-app.set('port', (process.env.PORT || 5000));
-
-//For avoidong Heroku $PORT error
-var port = app.get('port');
-app = express();
-console.log('App is running, server is listening on port ', app.get('port'));
 
 module.exports = function(grunt) {
     // Project configuration
@@ -16,7 +7,7 @@ module.exports = function(grunt) {
         connect: {
             server: {
                 options: {
-		        port: port,
+		        port: 5000,
 		        hostname: "0.0.0.0",
                     livereload: 35729,
                     base: {
