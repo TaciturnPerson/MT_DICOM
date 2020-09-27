@@ -1,4 +1,6 @@
 /* global module */
+var port = process.env.PORT || 5000;
+console.log('port');
 
 module.exports = function(grunt) {
     // Project configuration
@@ -7,7 +9,7 @@ module.exports = function(grunt) {
         connect: {
             server: {
                 options: {
-		        port: process.env.PORT || 5000,
+		        port: port,
                     keepalive: true,
                     base: {
                         path: './',
@@ -15,23 +17,12 @@ module.exports = function(grunt) {
                             index: 'index.html'
                         },
                     },
-                    open: true
                 }
-            },
-        },
-        watch: {
-            scripts: {
-                options: {
-                    livereload: 35729
-                },
-                files: ['**/*.js', '!**/node_modules/**', '**/node_modules/dwv/**', '*.html'],
-                tasks: []
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Task to run tests
     grunt.registerTask('start', ['connect']);
