@@ -27,7 +27,6 @@
     "node": "12.x"
   },
   "scripts": {
-    "start": "grunt start",
-    "poststart": "grunt wait"
+    "start": "grunt start"
   }
 }
