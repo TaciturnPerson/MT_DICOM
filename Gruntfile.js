@@ -13,8 +13,9 @@ module.exports = function(grunt) {
                         path: './',
                         options: {
                             index: 'index.html'
-                        }
-                    }
+                        },
+                    },
+                    open: true
                 }
             },
         },
