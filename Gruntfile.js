@@ -9,7 +9,11 @@ module.exports = function(grunt) {
     app.set('port', (process.env.PORT || 5000));
 
 //For avoidong Heroku $PORT error
-    app.get('/', grunt.initConfig({
+    app.get('/', grunt.registerTask('start', ['connect:prod', 'watch'])).listen(app.get('port'), function() {
+        console.log('App is running, server is listening on port ', app.get('port'));
+    });
+
+    grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
             files: ['Gruntfile.js', 'service-worker.js', 'src/**/*.js', '!src/utils/modernizr.js'],
@@ -33,8 +37,8 @@ module.exports = function(grunt) {
         connect: {
             prod: {
                 options: {
-                    //port: 5000,
-                    hostname: "0.0.0.0",
+		    //port: 5000,
+		    hostname: "0.0.0.0",
                     livereload: true
                 }
             },
@@ -47,11 +51,7 @@ module.exports = function(grunt) {
                 }
             }
         }
-    })).listen(app.get('port'), function() {
-        console.log('App is running, server is listening on port ', app.get('port'));
     });
-
-
 
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-connect');
@@ -59,5 +59,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Task to run tests
-    grunt.registerTask('start', ['connect:prod', 'watch']);
+
 };
