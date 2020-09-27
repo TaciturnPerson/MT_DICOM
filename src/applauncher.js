@@ -19,14 +19,13 @@ function startApp() {
         "Url"
     ];
 
-    var filterList = [
+    /*var filterList = [
         "Threshold",
         "Sharpen",
         "Sobel"
-    ];
+    ];*/
 
     var shapeList = [
-        "Arrow",
         "Ruler",
         "Protractor",
         "Rectangle",
@@ -43,18 +42,18 @@ function startApp() {
             options: shapeList,
             type: "factory",
             events: ["draw-create", "draw-change", "draw-move", "draw-delete"]
-        },
+        }/*,
         "Livewire":  {
             events: ["draw-create", "draw-change", "draw-move", "draw-delete"]
         },
-        "Filter": {
+        Filter": {
             options: filterList,
             type: "instance",
             events: ["filter-run", "filter-undo"]
         },
         "Floodfill": {
             events: ["draw-create", "draw-change", "draw-move", "draw-delete"]
-        }
+        }*/
     };
 
     // initialise the application
