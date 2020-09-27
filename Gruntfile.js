@@ -59,6 +59,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Task to run tests
-
+    grunt.registerTask('init', ['connect:init']);
     grunt.registerTask('start', ['connect:server', 'watch']);
 };
