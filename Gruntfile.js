@@ -1,7 +1,5 @@
 /* global module */
 
-
-
 module.exports = function(grunt) {
     // Project configuration
     grunt.initConfig({
@@ -28,7 +26,8 @@ module.exports = function(grunt) {
         connect: {
             prod: {
                 options: {
-                    hostname: '0.0.0.0',
+		    port: 5000,
+		    hostname: "0.0.0.0",
                     livereload: true
                 }
             },
