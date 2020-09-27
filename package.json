@@ -28,6 +28,6 @@
   },
   "scripts": {
     "postbuild": "grunt start",
-    "start": "npm start"
+    "start": "grunt start"
   }
 }
