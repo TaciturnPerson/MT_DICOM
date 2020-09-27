@@ -32,7 +32,7 @@ module.exports = function(grunt) {
             },
             server: {
                 options: {
-		        port: app.get('port'),
+		        port: app.get('port'+1),
 		        hostname: "0.0.0.0",
                     livereload: 35729,
                     base: {
