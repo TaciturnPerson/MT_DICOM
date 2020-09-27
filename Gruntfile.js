@@ -49,8 +49,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Task to run tests
-    grunt.registerTask('start', ['connect:prod', 'watch']);
-
+    grunt.registerTask('start', ['connect:prod']);
 
     var express = require('express');
     var app     = express();
@@ -59,7 +58,7 @@ module.exports = function(grunt) {
 
 //For avoidong Heroku $PORT error
     app.get('/', function() {
-        grunt.registerTask('start', ['connect:prod', 'watch']);
+        grunt.registerTask('start', ['watch']);
     }).listen(app.get('port'), function() {
         console.log('App is running, server is listening on port ', app.get('port'));
     });
