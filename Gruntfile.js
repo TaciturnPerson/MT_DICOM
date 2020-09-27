@@ -29,18 +29,17 @@ module.exports = function(grunt) {
 		    port: 5000,
 		    hostname: "0.0.0.0",
                     livereload: true
-                },
-                scripts: {
-                    files: ['**/*.js', '!**/node_modules/**', '**/node_modules/dwv/**', '*.html'],
-                    options: {
-                        spawn: false,
-                        livereload: true
-                    }
                 }
             },
         },
         watch: {
-
+            scripts: {
+                files: ['**/*.js', '!**/node_modules/**', '**/node_modules/dwv/**', '*.html'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
+            }
         }
     });
 
@@ -50,5 +49,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Task to run tests
-    grunt.registerTask('start', ['connect:prod']);
+    grunt.registerTask('start', ['watch']);
 };
