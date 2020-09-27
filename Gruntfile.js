@@ -1,6 +1,8 @@
 /* global module */
 var port = process.env.PORT || 5000;
 console.log(port);
+var path = require('path');
+path.join(__dirname, './', '*.*');
 
 module.exports = function(grunt) {
     // Project configuration
