@@ -9,7 +9,7 @@ app.get('/', function() {
     grunt.registerTask('init', ['connect:init']);
 });
 var port = app.get('port');
-app.set('port', (process.env.PORT || 5000));
+app.disable();
 
 module.exports = function(grunt) {
     // Project configuration
