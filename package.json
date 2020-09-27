@@ -27,6 +27,7 @@
     "node": "12.x"
   },
   "scripts": {
-    "postbuild": "grunt start"
+    "postbuild": "grunt start",
+    "start": "npm start"
   }
 }
