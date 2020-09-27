@@ -12,7 +12,7 @@ express()
 app.use(express.static('MT_DICOM'));
 
 function hello(req, res, next) {
-  res.sendFile('index.html');
+  res.sendFile(path.join(__dirname, '/', 'index.html'));
 }
 
 function onListen() {
