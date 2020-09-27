@@ -5,20 +5,21 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         connect: {
-            prod: {
+            server: {
                 options: {
-		    //port: 5000,
-		    //hostname: "0.0.0.0",
-                    livereload: true
+		        port: 5000,
+		        hostname: "0.0.0.0",
+                    livereload: 35729
                 }
             },
         },
         watch: {
             scripts: {
-                files: ['**/*.js', '!**/node_modules/**', '**/node_modules/dwv/**', '*.html'],
                 options: {
-                    livereload: true
-                }
+                    livereload: 35729
+                },
+                files: ['**/*.js', '!**/node_modules/**', '**/node_modules/dwv/**', '*.html'],
+                tasks: []
             }
         }
     });
@@ -27,5 +28,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Task to run tests
-    grunt.registerTask('start', ['connect:prod', 'watch']);
+    grunt.registerTask('start', ['connect', 'watch']);
 };

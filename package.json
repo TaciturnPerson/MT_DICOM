@@ -27,7 +27,6 @@
     "node": "12.x"
   },
   "scripts": {
-    "heroku-postbuild": "grunt start",
-    "start": "npm start"
+    "start": "grunt start"
   }
 }
