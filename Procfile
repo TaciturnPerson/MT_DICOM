@@ -1,1 +1,1 @@
-web: ./node_modules/grunt/bin/grunt grunt start
+web: npm start
