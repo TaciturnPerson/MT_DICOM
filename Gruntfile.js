@@ -5,14 +5,8 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 
 //For avoidong Heroku $PORT error
-app.get('/', function() {
-    grunt.registerTask('init', ['connect:init']);
-}).listen(app.get('port'), function() {
-    console.log('App is running, server is listening on port ', app.get('port'));
-});
 var port = app.get('port');
 app = express();
-app.close();
 console.log('App is running, server is listening on port ', app.get('port'));
 
 module.exports = function(grunt) {
