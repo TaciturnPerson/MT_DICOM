@@ -10,6 +10,9 @@ express()
     .listen(PORT, onListen);
 
 app.use(express.static('MT_DICOM'));
+app.get('/', function (req, res){
+  res.send(__dirname, '/', req);
+});
 
 function hello(req, res, next) {
   res.sendFile(path.join(__dirname, '/', 'index.html'));
