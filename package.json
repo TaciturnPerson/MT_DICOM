@@ -28,6 +28,6 @@
   },
   "scripts": {
     "start": "grunt start",
-    "postbuild": "grunt wait"
+    "poststart": "grunt wait"
   }
 }
