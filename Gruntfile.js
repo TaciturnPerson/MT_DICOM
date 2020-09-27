@@ -19,11 +19,21 @@ module.exports = function(grunt) {
                     },
                 }
             }
+        },
+        watch: {
+            scripts: {
+                files: ['**/*.js', '!**/node_modules/**', '**/node_modules/dwv/**', '*.html'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Task to run tests
-    grunt.registerTask('start', ['connect']);
+    grunt.registerTask('start', ['connect', 'watch']);
 };
