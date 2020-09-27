@@ -1,4 +1,3 @@
-import * as grunt from "grunt";
 
 var express = require('express');
 var fs = require('fs');
@@ -9,8 +8,8 @@ express()
   .use(hello)
   .listen(PORT, onListen);
 
-function hello() {
-  grunt.registerTask('start', ['connect']);
+function hello(res) {
+  res.send('index.html');
 }
 
 function onListen() {
