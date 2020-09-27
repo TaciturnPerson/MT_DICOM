@@ -27,6 +27,6 @@
     "node": "12.x"
   },
   "scripts": {
-    "start": "grunt start"
+    "start": "node server.js"
   }
 }
