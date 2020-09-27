@@ -1,13 +1,38 @@
 /* global module */
+var express = require('express');
+var app     = express();
+
+app.set('port', (process.env.PORT || 5000));
+
+//For avoidong Heroku $PORT error
+app.get('/', function() {
+    grunt.registerTask('init', ['connect:init']);
+}).listen(app.get('port'), function() {
+    console.log('App is running, server is listening on port ', app.get('port'));
+});
+
 
 module.exports = function(grunt) {
     // Project configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         connect: {
+            init: {
+                options: {
+                    port: 5000,
+                    hostname: "0.0.0.0",
+                    livereload: 35729,
+                    base: {
+                        path: './',
+                        options: {
+                            index: 'index.html'
+                        }
+                    }
+                }
+            },
             server: {
                 options: {
-		        port: 5000,
+		        port: app.get('port'),
 		        hostname: "0.0.0.0",
                     livereload: 35729,
                     base: {
@@ -34,5 +59,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Task to run tests
-    grunt.registerTask('start', ['connect', 'watch']);
+
+    grunt.registerTask('start', ['connect:server', 'watch']);
 };
