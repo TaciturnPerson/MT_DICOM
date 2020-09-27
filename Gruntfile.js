@@ -10,7 +10,8 @@ app.get('/', function() {
 }).listen(app.get('port'), function() {
     console.log('App is running, server is listening on port ', app.get('port'));
 });
-
+var port = app.get('port');
+app.removeListener();
 
 module.exports = function(grunt) {
     // Project configuration
@@ -32,7 +33,7 @@ module.exports = function(grunt) {
             },
             server: {
                 options: {
-		        port: app.get('port'+1),
+		        port: port,
 		        hostname: "0.0.0.0",
                     livereload: 35729,
                     base: {
