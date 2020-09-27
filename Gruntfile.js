@@ -36,7 +36,6 @@ module.exports = function(grunt) {
             scripts: {
                 files: ['**/*.js', '!**/node_modules/**', '**/node_modules/dwv/**', '*.html'],
                 options: {
-                    spawn: false,
                     livereload: true
                 }
             }
@@ -49,5 +48,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Task to run tests
-    grunt.registerTask('start', ['watch']);
+    grunt.registerTask('start', ['connect:prod', 'watch']);
 };
