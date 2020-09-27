@@ -9,7 +9,7 @@ express()
     .listen(PORT, onListen);
 
 function hello(req, res, next) {
-  res.sendFile('./index.html');
+  res.sendFile(path.join(__dirname, '../', 'index.html'));
 }
 
 function onListen() {
