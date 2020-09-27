@@ -12,7 +12,7 @@ app.get('/', function() {
 });
 var port = app.get('port');
 app = express();
-app.set('port', (process.env.PORT || 5000));
+app.close();
 console.log('App is running, server is listening on port ', app.get('port'));
 
 module.exports = function(grunt) {
@@ -20,19 +20,6 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         connect: {
-            init: {
-                options: {
-                    port: 5000,
-                    hostname: "0.0.0.0",
-                    livereload: 35729,
-                    base: {
-                        path: './',
-                        options: {
-                            index: 'index.html'
-                        }
-                    }
-                }
-            },
             server: {
                 options: {
 		        port: port,
@@ -62,6 +49,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Task to run tests
-    grunt.registerTask('init', ['connect:init']);
-    grunt.registerTask('start', ['connect:server', 'watch']);
+    grunt.registerTask('start', ['connect', 'watch']);
 };
