@@ -1,6 +1,6 @@
 /* global module */
 var port = process.env.PORT || 5000;
-console.log(port);
+console.log("Port" + port);
 
 module.exports = function(grunt) {
     // Project configuration
