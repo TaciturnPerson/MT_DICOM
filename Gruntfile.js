@@ -1,6 +1,6 @@
 /* global module */
-var port = process.env.PORT || 5000;
-console.log("Port " + port);
+
+
 
 module.exports = function(grunt) {
     // Project configuration
@@ -9,6 +9,7 @@ module.exports = function(grunt) {
         connect: {
             server: {
                 options: {
+		            port: process.env.PORT || 5000,
                     livereload: true,
                     base: {
                         path: './',
