@@ -10,7 +10,7 @@ module.exports = function(grunt) {
             server: {
                 options: {
 		        port: port,
-                    keepalive: true,
+                    livereload: true,
                     base: {
                         path: './',
                         options: {
