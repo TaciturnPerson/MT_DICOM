@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/b804240b-3d7f-4d7b-b172-8040df98fa1d/resourceGroups/MT-DICOM-rg/providers/Microsoft.Web/sites/MT-DICOM",
+    "appService.deploySubpath": "."
+}
