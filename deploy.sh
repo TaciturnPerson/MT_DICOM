@@ -106,11 +106,10 @@ if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
 fi
 
 # 1.1. Grunt
-if [ -e "$DEPLOYMENT_TARGET/Gruntfile.js" ]; then
-  cd "$DEPLOYMENT_TARGET"
-  eval ./node_modules/.bin/grunt
-  exitWithMessageOnError "Grunt failed"
-  cd - > /dev/null
+if [ -e "$DEPLOYMENT_SOURCE/Gruntfile.js" ]; then
+  exitWithMessageOnError "installing grunt failed"
+  ./node_modules/.bin/grunt
+  exitWithMessageOnError "grunt failed"
 fi
 
 # 2. Select node version
