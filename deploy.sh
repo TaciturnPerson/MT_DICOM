@@ -12,7 +12,6 @@ exitWithMessageOnError () {
   if [ ! $? -eq 0 ]; then
     echo "An error has occurred during web site deployment."
     echo $1
-    exit 1
   fi
 }
 
@@ -106,6 +105,7 @@ if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
   exitWithMessageOnError "Kudu Sync failed"
 fi
 
+# 1.1. Grunt
 if [ -e "$DEPLOYMENT_TARGET/Gruntfile.js" ]; then
   cd "$DEPLOYMENT_TARGET"
   eval ./node_modules/.bin/grunt
